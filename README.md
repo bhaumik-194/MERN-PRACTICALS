@@ -5,7 +5,7 @@ This repository contains my **MERN practical submissions** completed as part of 
 ## 📚 Subject Details
 
 * **Subject:** MERN
-* **Total Practicals Completed:** 8
+* **Total Practicals Completed:** 13
 
 ## 📌 About This Repository
 
@@ -23,6 +23,11 @@ This repository contains all my practical work for the **MERN subject**, organiz
 | Practical 6 | `Prac6` |
 | Practical 7 | `Prac7` |
 | Practical 8 | `Prac8` |
+| Practical 9 | `Prac9` |
+| Practical 10 | `Prac10` |
+| Practical 11 | `Prac11` |
+| Practical 12 | `Prac12` |
+| Practical 13 | `Prac13` |
 
 ## 🎯 Purpose
 
