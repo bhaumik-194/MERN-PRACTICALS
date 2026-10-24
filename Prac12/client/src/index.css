@@ -1,0 +1,402 @@
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #202124;
+  background: #f7f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.navbar {
+  min-height: 72px;
+  padding: 16px 6%;
+  background: #fff;
+  border-bottom: 1px solid #e8eaf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #4f46e5;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.navbar nav a {
+  color: #5e6472;
+  font-size: 0.93rem;
+}
+
+.navbar nav a.active,
+.navbar nav a:hover {
+  color: #4f46e5;
+}
+
+.user-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.page-container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  padding: 40px 0 64px;
+}
+
+.hero {
+  padding: 54px 36px;
+  margin-bottom: 38px;
+  border-radius: 20px;
+  background: #eeedff;
+}
+
+.eyebrow {
+  color: #4f46e5;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.hero h1 {
+  max-width: 650px;
+  margin: 14px 0;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.hero p:last-child {
+  color: #626578;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  margin: 0 0 8px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.blog-card {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e8eaf0;
+  border-radius: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #1c234010;
+}
+
+.blog-card h2 {
+  font-size: 1.2rem;
+  overflow-wrap: anywhere;
+}
+
+.blog-preview {
+  color: #626578;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.muted {
+  color: #777d8b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-draft {
+  color: #8a5a00;
+  background: #fff1cc;
+}
+
+.status-published {
+  color: #167344;
+  background: #dff7e9;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #4f46e5;
+  font-weight: 650;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 18px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #4038c9;
+}
+
+.button-small {
+  padding: 9px 13px;
+}
+
+.button-secondary {
+  color: #353647;
+  background: #eeeff4;
+}
+
+.button-secondary:hover {
+  background: #e0e1eb;
+}
+
+.button-danger {
+  background: #dc3545;
+}
+
+.button-danger:hover {
+  background: #b92736;
+}
+
+.form-container,
+.editor-container {
+  width: min(520px, 90%);
+  margin: 48px auto;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e8eaf0;
+  border-radius: 16px;
+}
+
+.form-container h1,
+.editor-container h1 {
+  margin-top: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.form label {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d9dce5;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #202124;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px #4f46e51a;
+}
+
+.form textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.form button {
+  margin-top: 12px;
+}
+
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+  color: #626578;
+  font-size: 0.92rem;
+}
+
+.form-footer a {
+  color: #4f46e5;
+  font-weight: 650;
+}
+
+.error-message {
+  color: #c62828;
+  line-height: 1.5;
+}
+
+.empty-state,
+.center-message {
+  padding: 28px 0;
+  color: #777d8b;
+}
+
+.management-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.management-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid #e8eaf0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.management-item h2 {
+  margin: 10px 0 4px;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.action-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.article-container {
+  width: min(800px, 90%);
+  margin: 48px auto;
+  padding-bottom: 60px;
+}
+
+.article-container h1 {
+  margin-top: 26px;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  overflow-wrap: anywhere;
+}
+
+.article-content {
+  margin-top: 32px;
+  color: #353647;
+  font-size: 1.05rem;
+  line-height: 1.95;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 800px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navbar nav {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 36px 22px;
+  }
+
+  .form-container,
+  .editor-container {
+    padding: 24px 20px;
+  }
+
+  .management-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+}

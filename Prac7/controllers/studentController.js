@@ -92,4 +92,3 @@ module.exports = {
     updateStudent,
     deleteStudent
 };
-
